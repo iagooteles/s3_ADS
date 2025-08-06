@@ -1,4 +1,12 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+Banco de dados é um conjunto de software separado da aplicação que se comunica com as aplicações através da linguagem SQL.
+
+- Processamento de transação online.
+- Processamento para análise de dados.
+
+SGBD => Sistema Gerenciador de Banco de Dados.
+ex: MySQL, Oracle, PostgreSQL, MariaDB, SQLite
 
 
 
