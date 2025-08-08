@@ -1,0 +1,24 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Frontend => 
+    UI: Telas;
+    Componentes: ;
+    Browser: ;
+
+Backend =>
+
+Servidor: Apache, Tomcat;
+Banco de dados: ;
+API's: ;
+
+Arquiteturas: 
+
+    Monolítico - Todo o software em um só ambiente/container; Se cair, der errado, falhar, tudo da errado; Só comporta uma linguagem
+    Micro-serviços - Serviços/containers separados, se cair uma aplicação não necessariamente vai cair tudo; Pode comportar várias linguagens, maior flexibilicade; Mais complexo, por ter que comunicar um micro-serviço com outro; Comunicação via requisição HTTP;
+
+Cada micro-serviço vai possuir seu próprio CRUD;
+    
+
+
+
+* multicamadas => 
