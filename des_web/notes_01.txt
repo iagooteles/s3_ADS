@@ -22,3 +22,19 @@ Cada micro-serviço vai possuir seu próprio CRUD;
 
 
 * multicamadas => 
+
+__________________________________________________________________________________________________________________________
+
+Usar o spring initializer para configuração de pacotes => https://start.spring.io/ ;
+Nesse projeto usaremos Maven como gerenciador de pacotes;
+
+Dependências: 
+    Spring Boot DevTools
+    Spring Web
+    H2 => Banco de dados em memória;
+
+Gerar o pom.xml e abrir ele com o intellij (já que a extensão do java pode ser baixada nos pcs da unifor);
+
+
+
+
