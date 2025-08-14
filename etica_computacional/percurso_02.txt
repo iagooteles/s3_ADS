@@ -2,7 +2,7 @@ Códigos de ética na área de computação
 
 Não contamos com a regulamentação da profissão.
 
-1. Legislação e complience no cenário que envolve a computação.
+1. Legislação e compliance no cenário que envolve a computação.
 
 Devemos acrescentar que uma pessoa, em qualquer área de estudo ou profissão, pode estudar e utilizar a informática, atividade que não se restringe a quem frequenta cursos de nível superior – assim como inúmeras outras. Isso torna ainda mais difícil estipular uma regulamentação para o setor, uma vez que esta não abarcaria todos aqueles que praticam e desenvolvem suas atividades nessa área
 
@@ -19,12 +19,35 @@ Trata-se de voltar a atenção sobre as pessoas, sejam tomadores de decisão, ge
 
 2. Código de ética da computação e as relações com a cultura organizacional associada às instituições normalizadoras da área de computação
 
-CONTINUAR DAQUI
+ética não é a mesma coisa que lei, embora tenha relação com o “sentimento de justiça social”;
+
+É comum esperar que as diferentes profissões tenham “códigos de conduta”, uma vez que prestarão importantes serviços, bem como fornecerão produtos, que devem prezar pelo cumprimento de parâmetros mínimos, tendo em vista o não comprometimento da qualidade nem da confiança depositada em sua execução. 
+
+Profissionais da computação: 
+    - São responsáveis por projetar e desenvolver artefatos computacionais;
+    - Documentam as especificações de requisitos, modelos de análise e de projeto, elaboração de planos de teste, código fontes, manuais, manutenção, etc;
+    - Trabalham com infraestrutura, redes e hardware de computadores e dispositivos informáticos em geral;
+
+Os códigos de ética são elaborados pelos Conselhos profissionais, entidades responsáveis por representar e fiscalizar a atuação e o exercício de uma profissão;
+
+Como já antecipamos no circuito anterior, nem todas as profissões possuem um Conselho. Sabe-se que a área que envolve o campo da computação ainda não é uma profissão regulamentada no Brasil. Logo, não conta com um Conselho ou um código de ética formalmente instituído
+
+Com o intuito de estabelecer parâmetros de conduta, responsabilidade e atuação profissional, o Instituto para Ética da Computação criou um código, que ficou conhecido como “Os Dez Mandamentos para Ética na Informática”, quais sejam:
+
+1. Não usarás um computador para causar mal a outrem.
+2. Não interferirás no trabalho de computação de outrem.
+3. Não bisbilhotarás os arquivos de computação de outrem.
+4. Não usarás um computador para roubar.
+5. Não usarás um computador para dar falso testemunho.
+6. Não copiarás e nem usarás software proprietário pelo qual não tenhas pago.
+7. Não usarás os recursos computacionais de outrem sem a devida autorização ou
+compensação.
+8. Não te apropriarás do produto intelectual de outrem.
+9. Considerarás as consequências sociais do programa que estás escrevendo ou do
+sistema que estás projetando.
+10.Usarás sempre um computador de forma a garantir a consideração e o respeito pelos
+teus semelhantes.
 
 
 
-
-
-
-
-
+FAZER EXERCÍCIOS 
