@@ -1,0 +1,76 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Projeto Arquitetura de Sistemas
+
+Assinatura de um método => nome, tipo de retorno e seus parâmetros;
+
+Roteiro:
+    - Integridade conceitual;
+    - Ocultamento de informação;
+    - Coesão;
+    - Acoplamento;
+
+
+Integridade conceitual => Facilita o uso e entendimento de um sistema: 
+    Exemplos:
+        - Botão "sair" idêntico em todas as telas;
+        - Se um sistema usa tabelas para apresentar resultados, todas as tabelas têm o mesmo layout;
+        - Todos os resultados são mostrados com 2 casas decimais;
+        Em nível de projeto/código:
+        - Todas as variáveis seguindo o mesmo padrão de nome: "nota_total"/"nota_media";
+        - Todas as páginas usam o mesmo framework;
+        - Se um problema é resolvido com uma estrutura de dados X, todos os problemas parecidos também usam X;
+
+
+Ocultamento de informação => 
+    Classes devem ocultar detalhes internos de sua implementação (usando o private)
+    ..........
+
+
+Coesão => 
+    Uma classe deve ter uma única função, oferecer um único princípio;
+    Vale também para outras unidades: funções, métodos, pacotes, etc;
+
+
+Acoplamento => Nenhuma classe é isolada, em POO classes dependem uma das outras, chamam métodos de outras classes e estendem outras classes. As entidades se comunicam, a questão é a organização e qualidade desse acoplamento;
+    Basicamente vamos deixar a responsabilidade do código e sua implementação na sua classe responsável, as classes que usam o serviço dessa primeira classe não devem sofrer caso a primeira classe mude sua forma de implementação, pois caso isso aconteça, seria necessário mudar o código de todas as classes que utilizam esta implementação;
+
+    
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Abstração => 
+    -> Encapsulamento
+    -> Herança
+    -> polimorfismo
+    -> agregação/associação: Quando se pode compor um objeto complexo adicionando a ele ou fazer com que ele seja montado através de outros objetos menores
+
+
+Exercício => 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
