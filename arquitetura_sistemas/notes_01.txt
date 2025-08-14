@@ -4,6 +4,32 @@ Projeto Arquitetura de Sistemas
 
 Assinatura de um método => nome, tipo de retorno e seus parâmetros;
 
+SOLID => Princípios de projeto orientado a objetos (mas que podem ser generalizados), Tem como objetivo auxiliar no desenvolvimento de software ; Código “limpo” ; Responsabilidades bem definidas ; Facilidade de refatoração e manutenção ; Subconjunto de boas práticas ; =>
+    Single Responsibility Principle (SRP) - Uma classe deve ter UM, e somente um, MOTIVO para mudar.
+    Open-Closed Principle (OCP) - Objetos e/ou classes devem estar abertos para extensão, mas fechados para modificação.
+    * Liskov Substitution Principle (LSP) - Uma classe derivada deve ser substituível pela sua classe base.
+    Interface Segregation Principle (ISP) - Uma classe não deve ser forçada a implementar interfaces que não usa. Evitar "poluição" da interface → baixo acoplamento.
+    * Dependency Inversion Principle (DIP) - Módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem depender de abstrações.
+
+
+Anti-padrões => Esses anti-padrões são problemas comuns que ocorrem quando os princípios SOLID não são seguidos corretamente. Cada princípio visa resolver um conjunto específico de problemas e fornecer diretrizes para a construção de software modular, coeso e de fácil manutenção
+
+
+GRASP => General Responsibility Assignment Software Patterns => são um conjunto de diretrizes para atribuição de responsabilidades em um projeto orientado a objetos. Eles ajudam os desenvolvedores a criar sistemas bem estruturados e de fácil manutenção, promovendo princípios como coesão, baixo acoplamento e reutilização de código; Padrão de projeto; 
+Os principais padrões GRASP são:
+    Criador (Creator) - 
+    Especialista da Informação (Information Expert) - 
+    Controlador (Controller) - 
+    Baixo Acoplamento (Low Coupling) - 
+    Alta Coesão (High Cohesion) - 
+    Polimorfismo (Polymorphism) -
+    Fabricação Pura (Pure Fabrication) -
+    Indireção (Indirection) -
+    Variações Protegidas (Protected Variations) - 
+
+
+
+
 Roteiro:
     - Integridade conceitual;
     - Ocultamento de informação;
@@ -47,15 +73,33 @@ Abstração =>
 
 Exercício => 
 
+Explique e exemplifique a propriedade Integridade Conceitual.
+
+    O princípio da integridade conceitual facilita o entendimento de um sistema em um contexto geral, de forma que ele tenha informações semelhantes no nível de layout e telas(como por exemplo, um mesmo layout utilizado para botões, mesmo que em telas diferentes. Seguir padrões de páginas e bons costumes) e código organizado(como por exemplo, dar bons nomes nas variáveis, deixar suas funções obedecendo o princípio da responsabilidade única, usar o mesmo framework);
+
+Explique e exemplifique a propriedade Acoplamento.
+
+    Acoplamento acontece por conta de nosso código se comunicar entre seus próprios módulos ou classes. As classes se comunicam e nenhuma delas é completa isoladamente. Classes podem chamar métodos de outras classes ou interfaces.
+    Essa comunicação deve ser feita de forma organizada e enxuta. Acoplamento basicamente significa o poder de comunicação entre as classes para deixar o código mais completo, organizado e com uma melhor manutenabilidade.
+
+Explique e exemplifique a propriedade Coesão.
+
+    Coesão lembra o princípio da responsabilidade única na qual podemos dizer que uma classe, nesse caso, deve ter apenas uma única responsabilidade e ser responsável por apenas uma única ação.
+    Responsabilidades não inerentes ou distantes do objetivo inicial dessa classe devem ser colocadas em outras classes ou interfaces para mantermos o nosso código organizado.
 
 
+Explique no contexto da Orientação à Objetos, o conceito de Abstração citando: encapsulamento, herança, polimorfismo e agregação.
+
+    Abstração - É o poder que a POO tem de representar objetos do mundo real no código, deixando apenas o essencial para o programa funcionar.
+    Encapsulamento - Trata-se de proteger nossos atributos das classes de forma a deixá-los privados e indisponibilizar o seu acesso direto.
+    Herança - Trata-se de poder herdar métodos e atributos das classes pai para as classes filha.
+    Polimorfismo - Vem de várias formas, basicamente possibilita um método poder ter ações diferentes de uma classe pai para a filha;
+    Agregação - Quando se pode compor um objeto complexo adicionando a ele ou fazer com que ele seja montado através de outros objetos menores;
 
 
+Explique e exemplifique a propriedade Ocultamento de informações.
 
-
-
-
-
+    Classes devem ocultar atributos essenciais de suas operações utilizando o acesso private.
 
 
 
