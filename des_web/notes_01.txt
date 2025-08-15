@@ -35,6 +35,33 @@ Dependências:
 
 Gerar o pom.xml e abrir ele com o intellij (já que a extensão do java pode ser baixada nos pcs da unifor);
 
+* temurim
 
 
 
+__________________________________________________________________________________________________________________________
+
+
+backend => 
+    - Regras de negócio do lado do servidor;
+    -
+
+frontend =>
+
+
+MVC => Padrão de projeto;
+    - Model => Regra de negócio para se conectar ao banco;
+    - View => UI, Telas;
+    - Controller => Lidar com as requisições das telas e processa; Regras de negócio; 
+
+Não vamos trabalhar com MVC nesse projeto;
+
+Vamos usar o padrão multi-camadas:
+
+- Controller: Receber a requisição e processar;  
+- Service: Regras de negócio;
+- Repository: Conexão com o banco de dados;
+- DTO;
+- Entity: Criação do objeto;
+
+ORM => Mapeamento Objeto Relacional;
