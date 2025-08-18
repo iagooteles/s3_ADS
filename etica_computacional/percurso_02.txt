@@ -50,4 +50,27 @@ teus semelhantes.
 
 
 
-FAZER EXERCÍCIOS 
+EXERCÍCIOS 
+
+Programas de integridade, conhecidos por compliance, mobilizam práticas de governança que possam se antecipar e prevenir riscos, entre os quais pode-se destacar, principalmente:
+
+    c. questões tributárias, trabalhistas, falhas em sistemas e ferramentas de TI, fraudes financeiras e na contratação de fornecedores, além de corrupção de agentes públicos.
+
+
+
+A busca e a formação de profissionais competentes e éticos não começa nem termina numa universidade, estando presente no ambiente corporativo público ou privado. Nesse sentido, mecanismos de conformidade e integridade estão cada vez mais frequentes no âmbito organizacional, estabelecendo rotinas e instrumentos que possibilitem o seguimento de normas, legislações e demais requisitos ao adequado funcionamento das instituições e da procura e manutenção do bem-estar coletivo. Diante dessa preocupação, emergem programas de integridade, conhecidos por compliance, cujo conceito está relacionado:
+
+    a. à promoção de uma cultura que priorize e estimule a ética, tendo como máxima o cumprimento da lei e a prevenção de riscos associados à violação desta e de outras normas.
+
+
+
+Criar uma cultura que permita disseminar e “naturalizar” a conduta ética, auxiliando colaboradores quanto ao cumprimento da legislação, do código de ética, bem como de políticas que atuem internamente, estão entre os objetivos:
+
+    d. de programas de integridade e conformidade.
+
+
+
+É importante ter em mente que os Códigos de Ética profissional se voltam aos atores e aos agentes sociais relacionados à rede em que atuam os profissionais para quem os códigos orientam e se destinam. Nesse sentido, além do profissional da computação e da sociedade em geral, conforme detalha Masiero (2004), os códigos de ética em computação referem-se aos seguintes setores e atores sociais:
+    usuários, empregadores e empregados, clientes, colegas de trabalho e organizações.
+
+
