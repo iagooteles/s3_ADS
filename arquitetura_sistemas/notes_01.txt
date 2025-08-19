@@ -104,9 +104,25 @@ Explique e exemplifique a propriedade Ocultamento de informações.
 
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+Design patterns => 
 
+
+Padrões de criação => 
+
+
+Padrões estruturais =>
+
+
+Padrões comportamentais => 
+
+
+Singleton =>
+Problema: uma classe precisa ter uma única instância;
+Solução: garante que uma classe terá uma somente única instância;
+Consequências: Fácil acesso e gerência de recursos compartilhados como variáveis globais.
 
 
 
