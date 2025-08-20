@@ -29,9 +29,10 @@ Usar o spring initializer para configuração de pacotes => https://start.spring
 Nesse projeto usaremos Maven como gerenciador de pacotes;
 
 Dependências: 
-    Spring Boot DevTools
-    Spring Web
+    Spring Boot DevTools;
+    Spring Web;
     H2 => Banco de dados em memória;
+    
 
 Gerar o pom.xml e abrir ele com o intellij (já que a extensão do java pode ser baixada nos pcs da unifor);
 
@@ -58,10 +59,26 @@ Não vamos trabalhar com MVC nesse projeto;
 
 Vamos usar o padrão multi-camadas:
 
-- Controller: Receber a requisição e processar;  
-- Service: Regras de negócio;
-- Repository: Conexão com o banco de dados;
-- DTO;
-- Entity: Criação do objeto;
+- Controller:
+    Receber a requisição e chama a service para implementar a regra de negócio;
+    Se Comunica com a service;
+    Chamar a regra de negócio;
+    Porta de entrada do backend(clase de fronteira);
+        Get;
+        Post;
+        Put;
+        Delete;
+- Service:
+    Regras de negócio;
+    A service chama a Repository;
+- Repository:
+    Conexão com o banco de dados;
+    Onde acontece a persistência dos dados;
+- DTO:
+    Data Transfer Object;
+    Camada responsável por criar um objeto espelho da entidade, mas que pode ser diferente em alguns momentos;
+    Serve, por exemplo, para não enviar dados sensíveis como seria se enviássemos a entidade inteira;
+- Entity:
+    Criação do objeto;
 
 ORM => Mapeamento Objeto Relacional;
