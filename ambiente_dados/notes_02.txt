@@ -47,31 +47,40 @@ Entidades:
 
 PRODUTO (Forte, Concreta)
 id(S, U, A),
-nome(C, U, A),
-descricao,
-quantidade,
-valor,
+nome(S, U, A),
+descricao(S, U, A),
+quantidade(S, U, A),
+valor(S, U, A),
 
 CLIENTE (Forte, Concreta)
 cpf(S, U, A),
 nome(C, U, A),
 idade(S, U, D),
-data de nascimento,
+data de nascimento(C, U, A),
 fidelidade(S, U, D),
 
 FUNCIONARIO (Forte, Concreta)
 cpf(S, U, A),
-nome,
-data de nascimento,
+nome(C, U, A),
+data de nascimento(C, U, A),
 
 VENDA (Fraca, Abstrata)
 id(S, U, A),
 produtos,
 total(S, U, D),
 imposto,
-data
+data(C, U, A)
 
 
+FORNECEDOR (Forte, Concreta)
+cnpj → S, U, A
+nome → S, U, A
+endereco → C (rua, número, bairro, cidade, estado, CEP), U, A
+telefone → S, M, A
+email → S, U, A
 
-
-
+ESTOQUE (Fraca, Abstrata)
+id → S, U, A
+localizacao → C (corredor, prateleira, posição), U, A
+quantidade_atual → S, U, A
+data_ultima_atualizacao → C(dia, mês, ano, hora), U, A
