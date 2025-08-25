@@ -84,3 +84,39 @@ id → S, U, A
 localizacao → C (corredor, prateleira, posição), U, A
 quantidade_atual → S, U, A
 data_ultima_atualizacao → C(dia, mês, ano, hora), U, A
+
+
+
+Cardinalidade de um Relacionamento:
+1-n      => Um Registro de mesa pode realizar vários pedidos;
+n-n      => vários produtos pode ser vendido pra vários clientes;
+1-1      => Cada Motorista só possui um CNH;
+
+Entidade 
+Atributo
+Relacionamento
+****
+Composição: 
+    - Simples:
+    - Composto:
+
+Valor:
+    - Univalorado:
+    - Multivalorado
+Armazenamento:
+    - Derivado:
+    - Armazenado:
+
+
+Diagramas => 
+
+Retangulos representam entidades;
+Elipses representam atributos;
+Losangos representam relacionamentos;
+
+O atributo chave tem seu nome sublinhado;
+Todo atributo derivado é pontilhado;
+Todo atributo multivalorados são respresentados por 2 elipses;
+Atributos compostos são representados por segmentos ao seu atributo composto
+
+
