@@ -1,0 +1,117 @@
+1. Explique com suas próprias palavras o que são os princípios SOLID e por que são importantes no desenvolvimento de software.
+
+RESPOSTA:
+SOLID consiste em um conjunto de boas práticas para o desenvolvimento de software mais voltado para programação orientada a objetos, porém seus princípios são tão bons, relevantes e necessários que acabam sendo utilizados como referência para programação de uma forma geral. Esses princípios auxiliam em criar e manter sistemas de forma mais organizada, coesa e pouca acoplada. Ajudam também na manutenção e extensão do projeto.
+
+
+2. Associe cada princípio SOLID à sua definição correta:
+
+a) Single Responsibility Principle (SRP)
+b) Open/Closed Principle (OCP)
+c) Liskov Substitution Principle (LSP)
+d) Interface Segregation Principle (ISP)
+e) Dependency Inversion Principle (DIP)
+
+( c ) Um objeto derivado deve ser substituível por seu objeto base sem alterar o comportamento do sistema.
+( a ) Uma classe deve ter apenas um motivo para ser modificada.
+( b ) Uma classe deve estar aberta para extensão, mas fechada para modificação.
+( d ) Interfaces específicas devem ser preferidas a interfaces genéricas e grandes.
+( e ) Módulos de alto nível não devem depender de módulos de baixo nível diretamente.
+
+
+
+3. Analise os itens abaixo:
+
+a) O código abaixo viola um ou mais princípios SOLID. Identifique quais são e proponha uma solução para torná-lo mais aderente aos princípios:
+
+
+    class Report {
+      public void generateReport() {
+        // Lógica de geração do relatório
+      }
+
+      public void saveToFile() {
+        // Lógica para salvar o relatório em um arquivo
+      }
+    }
+
+RESPOSTA: 
+Esse código viola o princípio da responsabilidade única (SRP), pois a classe tem duas responsabilidades: a de gerar relatório e a de salvar em um arquivo.
+Idealmente seria melhor separar em duas classes diferentes: Report(gerar o relatório) e ReportSaver(salvar o relatório em algum arquivo).
+
+
+b) Considere a seguinte implementação de um sistema de pagamento:
+
+
+class PaymentProcessor {
+    public void processPayment(String type) {
+        if (type.equals("CreditCard")) {
+            // Processa pagamento com cartão de crédito
+        } else if (type.equals("PayPal")) {
+            // Processa pagamento com PayPal
+        }
+    }
+}
+Esse código viola o princípio do Aberto/Fechado (OCP). Refatore-o para seguir esse princípio corretamente.
+
+RESPOSTA:
+interface PaymentMethod {
+    void process();
+}
+
+class CreditCardPayment implements PaymentMethod {
+    public void process() {
+        // Processa pagamento com cartão de crédito
+    }
+}
+
+class PayPalPayment implements PaymentMethod {
+    public void process() {
+        // Processa pagamento com PayPal
+    }
+}
+
+class PaymentProcessor {
+    public void processPayment(PaymentMethod paymentMethod) {
+        paymentMethod.process();
+    }
+}
+
+
+4. Suponha que você esteja desenvolvendo um sistema para gerenciar diferentes tipos de dispositivos eletrônicos. Atualmente, há uma única interface para todos os dispositivos:
+
+interface Device {
+    void turnOn();
+    void turnOff();
+    void connectToWiFi();
+}
+
+Entretanto, nem todos os dispositivos precisam de conexão Wi-Fi. Por exemplo, uma lâmpada inteligente precisa dessa funcionalidade, mas uma lâmpada convencional não.
+Tarefa:
+Identifique a violação do Princípio ISP no código.
+Reescreva o código criando interfaces segregadas para que cada dispositivo implemente apenas os métodos necessários.
+
+RESPOSTA:
+A violação, como comentado na pergunta, é de que nem todos os dispositivos precisam usar connectToWifi. Logo, usando essa interface, algumas classes que não precisem desse método vão ser obrigadas a implementá-lo, mesmo que ela não a use.
+A solução é separar as interfaces:
+
+interface Device {
+    void turnOn();
+    void turnOff();
+}
+
+interface WiFiConnect {
+    void connectToWiFi();
+}
+
+
+5. Dê um exemplo de uma situação real onde a aplicação dos princípios SOLID teria evitado problemas no código.
+
+RESPOSTA:
+um sistema de cadastro que mistura regras de negócio, persistência e interface gráfica em uma única classe.
+
+6. Na sua opinião, qual dos princípios SOLID é o mais difícil de seguir e por quê?
+
+RESPOSTA:
+LSP e DIP são dois princípios que ainda não entendo bem.
+SRP, OCP e DIP são tranquilos e fáceis de entender, eles condizem com bons princípios da programação de uma forma geral.
