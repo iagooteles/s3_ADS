@@ -11,7 +11,6 @@ SOLID => Princípios de projeto orientado a objetos (mas que podem ser generaliz
     Interface Segregation Principle (ISP) - Uma classe não deve ser forçada a implementar interfaces que não usa. Evitar "poluição" da interface → baixo acoplamento.
     * Dependency Inversion Principle (DIP) - Módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem depender de abstrações.
 
-
 Anti-padrões => Esses anti-padrões são problemas comuns que ocorrem quando os princípios SOLID não são seguidos corretamente. Cada princípio visa resolver um conjunto específico de problemas e fornecer diretrizes para a construção de software modular, coeso e de fácil manutenção
 
 
