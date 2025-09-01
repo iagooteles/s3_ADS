@@ -71,7 +71,6 @@ total(S, U, D),
 imposto,
 data(C, U, A)
 
-
 FORNECEDOR (Forte, Concreta)
 cnpj → S, U, A
 nome → S, U, A
@@ -99,7 +98,6 @@ Relacionamento
 Composição: 
     - Simples:
     - Composto:
-
 Valor:
     - Univalorado:
     - Multivalorado
