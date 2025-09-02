@@ -13,6 +13,31 @@ SOLID => Princípios de projeto orientado a objetos (mas que podem ser generaliz
 
 Anti-padrões => Esses anti-padrões são problemas comuns que ocorrem quando os princípios SOLID não são seguidos corretamente. Cada princípio visa resolver um conjunto específico de problemas e fornecer diretrizes para a construção de software modular, coeso e de fácil manutenção
 
+LSP Liskov Substitution Principle => As classes filhas devem ser substituível pela sua classe base sem perder seu comportamento;
+Se não for substituível fere esse princípio;
+
+Exemplo: 
+uma classe pai retangulo, com metodo calcularArea() e atributos lado e altura;
+uma classe filha quadrado que extende retangulo;
+mesmo que teoricamente dê certo se os valores do quadrado forem iguais, isso fere o principio caso sejam repassados valores que não sejam iguais no lado do quadrado;
+
+O que fazer nessa situação:
+Criar uma classe pai abstrada formaGeometrica com o método abstrado de calcularArea;
+logo ao criar as classes filhas retangulo e quadrado, que vão extender de formaGeometrica, cada um delas vai ter seu próprio atributo com sua aplicação do método de calcularArea;
+
+FormaGeometrica forma = new Quadrado(); => Isso deve ser possível, pois Quadrado é classe filha de FormaGeometrica
+
+
+public class Circulo extends FormaGeometrica {
+    private double pi;
+    private double r;
+
+    public double calcularArea() {
+        return pi * (r * r);
+    }
+}
+
+
 
 GRASP => General Responsibility Assignment Software Patterns => são um conjunto de diretrizes para atribuição de responsabilidades em um projeto orientado a objetos. Eles ajudam os desenvolvedores a criar sistemas bem estruturados e de fácil manutenção, promovendo princípios como coesão, baixo acoplamento e reutilização de código; Padrão de projeto; 
 Os principais padrões GRASP são:
@@ -25,9 +50,6 @@ Os principais padrões GRASP são:
     Fabricação Pura (Pure Fabrication) -
     Indireção (Indirection) -
     Variações Protegidas (Protected Variations) - 
-
-
-
 
 Roteiro:
     - Integridade conceitual;
