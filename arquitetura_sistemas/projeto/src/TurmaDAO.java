@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import turma.Aluno;
+
 public class TurmaDAO {
 
     public ArrayList<Aluno> load() {

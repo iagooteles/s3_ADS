@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import turma.Aluno;
+import turma.Turma;
+
 public class App {
     public static void main(String[] args) throws Exception {
         Turma turma = new Turma();
