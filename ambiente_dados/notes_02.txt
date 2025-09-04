@@ -35,6 +35,10 @@ Diagrama entidade relacionamento -
 DDL(Data Definition Language) (SQL) - 
 
 
+* super chave - 
+* chave candidata - 
+* chave primária - 
+* chave estrangeira - 
 
 
 _________________________________________________________________________________________________________________________________________
