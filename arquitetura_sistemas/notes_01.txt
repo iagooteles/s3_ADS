@@ -16,6 +16,10 @@ Anti-padrões => Esses anti-padrões são problemas comuns que ocorrem quando os
 LSP Liskov Substitution Principle => As classes filhas devem ser substituível pela sua classe base sem perder seu comportamento;
 Se não for substituível fere esse princípio;
 
+Dependency Inversion Principle =>   
+
+
+
 Exemplo: 
 uma classe pai retangulo, com metodo calcularArea() e atributos lado e altura;
 uma classe filha quadrado que extende retangulo;
