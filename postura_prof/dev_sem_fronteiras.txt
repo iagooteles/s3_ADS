@@ -1,13 +1,32 @@
-EP 207, montreal, canadá => 
+EP 150, zurique, suíça => 
+
+Apresentados => Fabrício carraro
+
+Entrevistado => Roger: Engenheiro de software do google morando em zurique suíca.
+
+Ele é de: Emperatriz - interior do maranhão
+a tecnologia entrou na vida dele: ele se interessou por uma questão de matemática do ITA que até a professora teve dificuldades de resolver. Aí ele começou a estudar para estudar estudar engenharia. Ele procurava uma bolsa e conseguiu no farias brito em fortaleza. Não tinha dinheiro nem para pagar a passagem de ônibus, através de alguns contatos ele conseguiu dinheiro para vir para fortaleza e alugar um kitnet.
+
+O irmão dele também conseguiu uma bolsa em fortaleza, aí a mãe deles decidiu largar tudo e vir morar com eles aqui, eles não tinham pai pq o pai deles morreu quando eles tinham 6 anos.
 
 
-o canadá precisa muito de imigrantes, 
-a provincia do quebec envia alguns emissários em países que acham interessantes receber imigrantes;
+como ele entrou no google??
 
-ITA???
+Roger comentou da síndrome do impostor, que é bem comum com as pessoas que estão entrando, ainda mais em uma empresa grande quanto a google, por estar cercado de pessoas muito boas no trabalho que fazem, se sentir meio que incapaz naquele trabalho. Ele disse que lá mesmo existe um tratamento para isso e como o google selecionava muito bem seus funcionários a grande maioria deles adota a cultura de se ajudar, bem importante para passar por cima dessa síndrome. Ele comentou, ainda, que o google oferece um 'peer bonus' que seria de 300~400 dólares para pessoas que ajudam as outras ou fazem algum tipo de gentileza e você pode oferecer até 5 'peer bonus' por mês.
 
-1º empresa que ele trabalhou ficou só 2 meses, mas daí não curtiu a cultura da empresa e resolveu procurar outra.
-cada província do canadá escolhe sua língua, quebec é frances, as demais são em inglês, e apenas uma província escolheu ser realmente bilíngue.
+Ele trabalha no search engine do youtube, otimizando o algoritmo de busca. A search engine que ele trabalha é a segunda maior do mundo perdendo apenas para a do próprio google.
+
+Trabalha com C++ e um pouco de python;
+Durante o estágio trabalhou com Go;
+
+Línguas de zurique??
+zurique é uma cidade mais parada;
+quantidade de habitantes?
+bom pra contato com a natureza;
+zurique tem o custo de vida bem caro, principalmente aluguel;
 
 
-
+- informações gerais => quem ele é, de onde veio, onde estudou...
+- tudo que ele estudou/trabalhou até chegar a ser Engenheiro de software no google;
+- curiosidades de zurique (não ficar preso só no podcast, trazer coisas e curiosidades que não foram citadas pelo entrevistado também) ;
+- cultura/curiosidades de trabalho do google (aproveitar para falar sobre o que o entrevistado faz no google) ;

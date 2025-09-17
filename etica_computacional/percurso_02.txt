@@ -57,11 +57,9 @@ Programas de integridade, conhecidos por compliance, mobilizam práticas de gove
     c. questões tributárias, trabalhistas, falhas em sistemas e ferramentas de TI, fraudes financeiras e na contratação de fornecedores, além de corrupção de agentes públicos.
 
 
-
 A busca e a formação de profissionais competentes e éticos não começa nem termina numa universidade, estando presente no ambiente corporativo público ou privado. Nesse sentido, mecanismos de conformidade e integridade estão cada vez mais frequentes no âmbito organizacional, estabelecendo rotinas e instrumentos que possibilitem o seguimento de normas, legislações e demais requisitos ao adequado funcionamento das instituições e da procura e manutenção do bem-estar coletivo. Diante dessa preocupação, emergem programas de integridade, conhecidos por compliance, cujo conceito está relacionado:
 
     a. à promoção de uma cultura que priorize e estimule a ética, tendo como máxima o cumprimento da lei e a prevenção de riscos associados à violação desta e de outras normas.
-
 
 
 Criar uma cultura que permita disseminar e “naturalizar” a conduta ética, auxiliando colaboradores quanto ao cumprimento da legislação, do código de ética, bem como de políticas que atuem internamente, estão entre os objetivos:
@@ -69,8 +67,34 @@ Criar uma cultura que permita disseminar e “naturalizar” a conduta ética, a
     d. de programas de integridade e conformidade.
 
 
-
 É importante ter em mente que os Códigos de Ética profissional se voltam aos atores e aos agentes sociais relacionados à rede em que atuam os profissionais para quem os códigos orientam e se destinam. Nesse sentido, além do profissional da computação e da sociedade em geral, conforme detalha Masiero (2004), os códigos de ética em computação referem-se aos seguintes setores e atores sociais:
     usuários, empregadores e empregados, clientes, colegas de trabalho e organizações.
 
 
+O código de ética elaborado pela ACM é abrangente e adequa-se a uma diversidade de profissionais e aspirantes no campo da computação. O código tem como propósito a promoção de uma conduta ética a todos os profissionais dessa área, inclusive sendo pensado para estudantes, influenciadores ou qualquer outra pessoa que se utilize da tecnologia da computação. Nesse sentido, a organização do código foi pensada em algumas seções, organizadas da seguinte forma:
+    quatro seções, em que estão expostos, respectivamente, princípios fundamentais; responsabilidades do profissional; diretrizes para gestores e líderes; e princípios de conformidade.
+
+
+
+A computação e a informática, no Brasil, começaram a ser desenvolvidas na década de 1950, por profissionais de outras áreas e com base no autodidatismo. Desde 1978, o debate sobre a regulamentação da profissão tem sido frequente (Bigonha, 2020). As discussões sobre a temática envolvem o fato de que:
+    O exercício da profissão é livre e, mesmo sem regulamentação, possui mecanismos de controle social que orientam processos de contratação e consolidação profissional.
+
+
+A demanda por produtos e serviços especializados, característica de sociedades contemporâneas e com grande divisão do trabalho, conta com mecanismos de proteção e controle instituídos socialmente e que contribuem para a observância e proteção contra “maus profissionais”. Em geral, tais mecanismos atuam por meio de:
+    controle de competência, conduzido por empregadores e clientes; exigência por diplomas e certificações; testes de admissão e análise de currículo; controle de qualidade de produtos; cumprimento da legislação em vigor.
+
+Sabe-se que importantes organizações internacionais vinculadas à Computação dedicaram-se a elaborar códigos de ética profissional. A _Association for Computing Machinery_ (ACM) e o _Institute of Electric and Electronic Engineers_ (IEEE) elaboraram projetos para a criação desses códigos, para os quais pode-se concluir que: 
+    1 O código de ética da ACM possui abrangência, voltando-se também a profissionais que atuam em _hardware_, infraestrutura e redes de computadores, enquanto o código do IEEE, elaborado em conjunto com a ACM, orienta-se para a área da Engenharia de _Software_.
+    2 Os códigos elaborados pelas duas entidades possuem validade apenas institucionalmente, não servindo de parâmetro para realidades externas.
+    3 O IEEE elaborou seu código contemplando engenheiros de _Software_ o que se sobrepõe a atividades também abarcadas pelo código de ética da ACM, gerando duplicidade de parâmetros.
+    4 Os códigos de ética pensados pela ACM e pelo IEEE contribuem para pensar, aplicar e orientar significativas condutas no âmbito profissional, relativas ao cenário da computação e da informática, internacionalmente. 
+Estão corretas as afirmações dos itens:
+    I e IV, apenas.
+
+
+
+
+
+
+
+    

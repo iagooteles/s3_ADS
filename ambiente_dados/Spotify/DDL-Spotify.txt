@@ -1,0 +1,115 @@
+CREATE DATABASE Spotify;
+
+CREATE TABLE Plano (
+    id_plano int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    valor DECIMAL(10,2) NOT NULL,
+    descricao TEXT NOT NULL,
+);
+
+
+CREATE TABLE Usuario (
+    id_usuario int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    primeiro_nome VARCHAR(255) NOT NULL,
+    sobrenome VARCHAR(255) NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    data_nascimento DATE NULL,
+
+    id_plano INT NOT NULL,
+
+    OBS: eu errei na modelagem do MER! // perguntar pro prof se preciso refazer!
+    CONSTRAINT FK_Usuario_Plano FOREIGN KEY (id_plano) REFERENCES Plano (id_plano)
+);
+
+
+CREATE TABLE Telefone (
+    id_telefone INT AUTO_INCREMENT PRIMARY KEY,
+    numero VARCHAR(20) NOT NULL,
+    id_usuario INT NOT NULL,
+
+    CONSTRAINT FK_Telefone_Usuario FOREIGN KEY (id_usuario) REFERENCES Usuario (id_usuario)
+);
+
+
+CREATE TABLE Perfil (
+    id_perfil int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    descricao VARCHAR(255) NOT NULL,
+    nacionalidade VARCHAR(255) NOT NULL,
+    estado VARCHAR(255) NOT NULL,
+    cidade VARCHAR(255) NOT NULL,
+    rua VARCHAR(255) NOT NULL,
+    numero VARCHAR(255) NOT NULL,
+
+    id_usuario INT NOT NULL,
+    CONSTRAINT FK_Perfil_Usuario FOREIGN KEY (id_Usuario) REFERENCES Usuario (id_Usuario)
+);
+
+
+CREATE TABLE gostos_musicais (
+    id_gosto_musical int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    gosto_musical VARCHAR(255) NOT NULL,
+    
+    id_perfil INT NOT NULL,
+
+    CONSTRAINT FK_gostos_musicais_perfil FOREIGN KEY (id_Perfil) REFERENCES Perfil (id_Perfil)
+);
+
+
+CREATE TABLE Playlist (
+    id_playlist int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    data_criacao DATE NOT NULL,
+    id_usuario int NOT NULL,
+
+    CONSTRAINT FK_playlist_usuario FOREIGN KEY (id_usuario) REFERENCES Usuario (id_usuario)
+);
+
+
+CREATE TABLE Musica (
+    id_musica int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    duracao TIME NOT NULL,
+    qtd_reproducoes int NOT NULL,
+
+    id_album INT,
+    CONSTRAINT FK_Musica_Album FOREIGN KEY (id_album) REFERENCES Album (id_album);
+);
+
+
+CREATE TABLE Playlist_Musica (
+    id_playlist INT NOT NULL,
+    id_musica INT NOT NULL,
+    PRIMARY KEY (id_playlist, id_musica),
+    CONSTRAINT FK_PM_Playlist FOREIGN KEY (id_playlist) REFERENCES Playlist (id_playlist),
+    CONSTRAINT FK_PM_Musica FOREIGN KEY (id_musica) REFERENCES Musica (id_musica)
+);
+
+
+CREATE TABLE Album (
+    id_album int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    titulo VARCHAR(255) NOT NULL,
+    ano_lancamento YEAR NOT NULL
+);
+
+
+CREATE TABLE Genero (
+    id_genero INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome VARCHAR(255) NOT NULL,
+    id_album int NOT NULL,
+
+    CONSTRAINT FK_Genero_Album FOREIGN KEY (id_album) REFERENCES Album (id_album)
+);
+
+
+CREATE TABLE Artista (
+    id_artista int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome VARCHAR(255) NOT NULL,
+    data_nascimento DATE NOT NULL,
+    nacionalidade VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Album_Artista (
+    id_album INT NOT NULL,
+    id_artista INT NOT NULL,
+    PRIMARY KEY (id_album, id_artista),
+    CONSTRAINT FK_AA_Album FOREIGN KEY (id_album) REFERENCES Album (id_album),
+    CONSTRAINT FK_AA_Artista FOREIGN KEY (id_artista) REFERENCES Artista (id_artista)
+);
+
