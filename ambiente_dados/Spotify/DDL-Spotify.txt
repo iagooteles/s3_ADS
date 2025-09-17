@@ -3,7 +3,7 @@ CREATE DATABASE Spotify;
 CREATE TABLE Plano (
     id_plano int PRIMARY KEY AUTO_INCREMENT NOT NULL,
     valor DECIMAL(10,2) NOT NULL,
-    descricao TEXT NOT NULL,
+    descricao TEXT NOT NULL
 );
 
 
@@ -15,7 +15,6 @@ CREATE TABLE Usuario (
     data_nascimento DATE NULL,
 
     id_plano INT NOT NULL,
-
     OBS: eu errei na modelagem do MER! // perguntar pro prof se preciso refazer!
     CONSTRAINT FK_Usuario_Plano FOREIGN KEY (id_plano) REFERENCES Plano (id_plano)
 );
@@ -49,7 +48,6 @@ CREATE TABLE gostos_musicais (
     gosto_musical VARCHAR(255) NOT NULL,
     
     id_perfil INT NOT NULL,
-
     CONSTRAINT FK_gostos_musicais_perfil FOREIGN KEY (id_Perfil) REFERENCES Perfil (id_Perfil)
 );
 
@@ -57,8 +55,8 @@ CREATE TABLE gostos_musicais (
 CREATE TABLE Playlist (
     id_playlist int PRIMARY KEY AUTO_INCREMENT NOT NULL,
     data_criacao DATE NOT NULL,
-    id_usuario int NOT NULL,
 
+    id_usuario int NOT NULL,
     CONSTRAINT FK_playlist_usuario FOREIGN KEY (id_usuario) REFERENCES Usuario (id_usuario)
 );
 
@@ -76,6 +74,7 @@ CREATE TABLE Musica (
 CREATE TABLE Playlist_Musica (
     id_playlist INT NOT NULL,
     id_musica INT NOT NULL,
+
     PRIMARY KEY (id_playlist, id_musica),
     CONSTRAINT FK_PM_Playlist FOREIGN KEY (id_playlist) REFERENCES Playlist (id_playlist),
     CONSTRAINT FK_PM_Musica FOREIGN KEY (id_musica) REFERENCES Musica (id_musica)
@@ -92,8 +91,8 @@ CREATE TABLE Album (
 CREATE TABLE Genero (
     id_genero INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     nome VARCHAR(255) NOT NULL,
-    id_album int NOT NULL,
 
+    id_album int NOT NULL,
     CONSTRAINT FK_Genero_Album FOREIGN KEY (id_album) REFERENCES Album (id_album)
 );
 
@@ -108,6 +107,7 @@ CREATE TABLE Artista (
 CREATE TABLE Album_Artista (
     id_album INT NOT NULL,
     id_artista INT NOT NULL,
+
     PRIMARY KEY (id_album, id_artista),
     CONSTRAINT FK_AA_Album FOREIGN KEY (id_album) REFERENCES Album (id_album),
     CONSTRAINT FK_AA_Artista FOREIGN KEY (id_artista) REFERENCES Artista (id_artista)
