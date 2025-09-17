@@ -15,7 +15,6 @@ CREATE TABLE Usuario (
     data_nascimento DATE NULL,
 
     id_plano INT NOT NULL,
-    OBS: eu errei na modelagem do MER! // perguntar pro prof se preciso refazer!
     CONSTRAINT FK_Usuario_Plano FOREIGN KEY (id_plano) REFERENCES Plano (id_plano)
 );
 
