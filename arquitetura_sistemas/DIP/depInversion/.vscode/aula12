@@ -1,0 +1,13 @@
+<script>
+    var altura, peso, IMC, Abaixodopeso, Saudavel, Sobrepeso, Obesidade1, Obesidade2, Obesidade3;
+    var altura = number(prompt("informe sua altura"));
+    var peso = number(prompt("informe seu peso"));
+    
+    var imc = (peso*altura)/2
+    
+    document.write = 
+        if (0 && 18.5){
+           Abaixo do peso;
+       } else 
+
+</script>

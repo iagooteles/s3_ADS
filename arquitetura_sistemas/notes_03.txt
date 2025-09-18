@@ -1,0 +1,14 @@
+Padrões de projeto ..
+
+Overengineering => Aplicar muitos padrões de projeto sem necessidade! Isso sobrecarrega o projeto e mais atrapalha que ajuda.
+
+Padrões de projeto criacionais => Fornecem maneiras eficientes de criar objetos, aumentando a flexibilidade e a reutilização do código.
+
+Factory method => 
+
+
+
+
+singleton => criação de um só objeto *** => analisar e ver se é isso mesmo
+
+ 
