@@ -1,0 +1,79 @@
+Builder =>
+
+Contexto - Imagine um sistema o qual estamos criando carros para uma oficina. A classe carro vai possuir diversos atributos, o que pode gerar construtores enormes.
+
+Problema - Dessa forma, Carro se torna um objeto complexo que necessita de uma inicialização passo a passo trabalhosa de muitos campos e objetos agrupados, gerando um construtor gigante com vários parâmetros. Se posteriormente surgir um novo atributo, essa mudança teria que ser feita no construtor e mudar todos os pontos do código.
+
+Solução - O padrão Builder permite que você produza diferentes tipos e representações de um objeto usando o mesmo código de construção. Ele sugere que você extraia o código de construção do objeto para fora de sua própria classe e mova ele para objetos separados chamados builders.
+
+Exemplo de construtor com Builder: 
+
+private Carro(Builder builder) {
+    this.marca = builder.marca;
+    this.modelo = builder.modelo;
+    this.cor = builder.cor;
+    this.portas = builder.portas;
+    this.motor = builder.motor;
+}
+
+Na classe Builder:
+
+public Builder (String marca, String modelo) {
+    this.marca = marca;
+    this.modelo = modelo;
+}
+
+public Builder cor(String cor) { 
+    this.cor = cor;
+    return this;
+}
+
+public Builder portas(int portas) { 
+    this.portas = portas;
+    return this;
+}
+
+public Builder motor(String motor) { 
+    this.motor = motor;
+    return this;
+}
+
+public Carro build() {
+    return new Carro(this);
+}
+
+No seu uso para criar o objeto:
+
+Carro carro = new Carro.Builder("Chevrolet", "Prisma")
+    .cor("Azul")
+    .portas("2")
+    .motor("2.0");
+
+
+________________________________________________________________________________________________________________________________
+
+Prototype => 
+O Prototype é um padrão de projeto criacional que permite copiar objetos existentes sem fazer seu código ficar dependente de suas classes.
+
+Contexto - Imagine que você tem uma locadora de veículos e tem diversos veículos iguais com os mesmos atributos. Criar objetos do zero é trabalhoso e requer várias inicializações. Duplicar ou copiar os objetos existentes nesse caso seria ideal.
+
+Problema - Repetição na criação de objetos com atributos iguais;
+
+Solução - Prototype permite clonar objetos já existentes.
+
+Exemplo: 
+public class Carro implements Cloneable{
+    ...
+    @Override
+    public Carro clone() {
+        try {
+            return (Carro) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+} 
+
+No seu uso:
+Carro car1 = new Carro("Toyota" .....);
+Carro car2 = car1.clone();
