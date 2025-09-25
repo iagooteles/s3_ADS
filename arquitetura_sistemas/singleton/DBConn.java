@@ -1,5 +1,5 @@
 public class DBConn {
-    
+
     private static DBConn instancia;
 
     private DBConn() {}
@@ -8,6 +8,7 @@ public class DBConn {
         if (instancia == null) {
             instancia = new DBConn();
         }
+        
         return instancia;
     }
 
