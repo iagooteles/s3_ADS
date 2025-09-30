@@ -1,0 +1,43 @@
+
+
+Ver vídeos...
+
+
+1. Políticas e legislação aplicadas ao ciberespaço: privacidade, pirataria, invasões e propriedade intelectual
+
+Relação com o contexto digital:
+- Privacidade do Indivíduo x Segurança Pública Coletiva;
+- Liberdade de Expressão x Responsabilidade;
+- Identidade Obrigatória x Anonimato;
+- Proteção de Dados x Acesso à Informação;
+- Crimes Digitais (novos tipos penais).
+
+
+2. Crimes cibernéticos e seus impactos sociais e profissionais
+
+
+Crimes digitais são “condutas criminosas cometidas no ciberespaço” 
+Ressalte-se que uma conduta criminosa é aquela que fere princípios fundamentais da sociedade, atentando contra a vida, a saúde, ou o direito à privacidade, por exemplo.
+
+São considerados e tipificados como crimes digitais, conforme detalha Pinheiro (2016):
+•	 informações caluniosas e demais crimes contra a honra, publicados e compartilhados por e-mails, aplicativos de mensagens etc;
+•	 ofensas digitais (difamação, calúnia e injúria), assim como a ameaça e perturbação, que causam danos sociais e psicológicos ao indivíduo (cyberbullying);
+•	 a contaminação por vírus, roubo de senhas e de dados, falsidade ideológica (passarse por outra pessoa);
+•	 o uso não autorizado de imagens (tanto de si como de terceiros);
+•	 infração aos direitos autorais, que envolve pirataria e plágio;
+•	 espionagem eletrônica;
+•	 vingança digital (uso de imagens, sequestro de perfil ou domínio, apagamento de dados, dentre outras condutas).
+
+Crimes digitais impróprios => Dispositivos informáticos são utilizados como meio de execução do crime. Por exemplo: uso de redes sociais para difamar alguém.
+
+Crimes digitais próprios => Dispositiovs informáticos são OBJETOS da prática do crime. Por exemplo: invasão de sistema de outros dispositivos eletrônicos.
+
+Sobre crimes digitais temos importantes características:
+
+a) nem sempre exigirão perícia técnica: os cibercrimes, embora estejam relacionados à tecnologia, às vezes, não necessitam de grandes conhecimentos técnicos. Em geral, criminosos se utilizam de programas de ataque já prontos e disponíveis, ou os contratam de terceiros. Jovens e menores de idade que se utilizam de programas prontos para fazer ataques são chamados de “script kiddies”.
+
+b) não respeitam limites geográficos: como grande parte desses crimes ocorre na internet, não há limitação de ordem geográfica. Isso torna possível invasões internacionais, as quais causam dados a servidores ou roubo de dados de usuários de nacionalidades diferentes.
+
+c) proteção da identidade: criminosos, especialmente aqueles que detém maior conhecimento técnico, costumam adotar medidas para ocultar a sua identidade e apagar rastros na internet. É comum mascarar o número IP utilizado, na tentativa de apagar “impressões digitais” de uma invasão, tentando buscar garantir anonimato.
+
+

@@ -11,4 +11,11 @@ Factory method =>
 
 singleton => criação de um só objeto *** => analisar e ver se é isso mesmo
 
- 
+
+
+Padrões estruturais: Como montar objetos e classes em estruturas maiores, mas ainda mantendo...
+
+Proxy => Permite que forneça um substituto ou intermediário que tenha que ser passado por ele o acesso ao objeto original. Para que ele faça alguma ação, antes, durante ou depois para que o pedido chegue ao objeto original.
+EX: uso de cache, no qual para antes de fazer uma busca nos dados da aplicação, se procura primeiro se está no cache.
+
+
