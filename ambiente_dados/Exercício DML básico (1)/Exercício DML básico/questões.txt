@@ -1,0 +1,63 @@
+1. Selecione todos os funcionários do departamento de ID 5.
+
+SELECT * FROM funcionarios WHERE DepartamentoID = 5;
+
+2. Liste os nomes e sobrenomes dos primeiros 10 funcionários contratados, ordenados pela data de contratação.
+
+SELECT Nome, Sobrenome, DataContratacao
+FROM funcionarios
+ORDER BY DataContratacao ASC
+LIMIT 10;
+
+3. Quantos funcionários foram contratados no ano de 2023?
+
+apenas 1
+
+SELECT Nome, Sobrenome, DataContratacao
+FROM funcionarios
+WHERE DataContratacao LIKE '2023%';
+
+4. Liste todos os projetos que começaram no ano de 2022, incluindo o nome do projeto e o orçamento, ordenados por orçamento descendentemente.
+
+nenhum projeto.
+
+SELECT NomeProjeto, Orçamento
+FROM projetos
+WHERE DataInicio LIKE '2022%'
+ORDER BY Orçamento DESC;
+
+5. Selecione os 5 cargos com o maior salário base, mostrando o título do cargo e o salário base.
+
+SELECT Titulo, SalarioBase
+FROM cargos
+ORDER BY SalarioBase DESC
+LIMIT 5;
+
+6. Busque por todos os registros da folha de pagamento ordernado de forma decrescente Retorne o registro pulando os 5 primeiros e limite a 10
+
+select * from folhapagamento
+ORDER BY ValorPago DESC
+LIMIT 10
+OFFSET 5;
+
+7. Delete todos os registros da tabela folha de pagamaneto que contem ValorPago entre 3000 e 5000
+
+SET SQL_SAFE_UPDATES=0;
+DELETE from folhapagamento WHERE ValorPago > 3000 AND ValorPago < 5000;
+
+8. Busque a média dos valores pagos da folha de pagamento entre os mêses de fev e jan de 2023
+
+SELECT AVG(ValorPago)
+FROM folhapagamento
+WHERE DataPagamento LIKE '2023-01%' OR DataPagamento LIKE '2023-02%';
+
+9. Atualize o titulo do cargo  de código 3 para "Gerente de M"
+
+update cargos 
+set Titulo = 'Gerente de M' 
+where CargoID = 3;
+
+10. Incremente em 10% todos os salários bases de todos os cargos.
+
+update cargos
+set SalarioBase = SalarioBase * 1.10;
