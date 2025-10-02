@@ -19,3 +19,7 @@ Proxy => Permite que forneça um substituto ou intermediário que tenha que ser 
 EX: uso de cache, no qual para antes de fazer uma busca nos dados da aplicação, se procura primeiro se está no cache.
 
 
+Adapter => permite que objetos com interfaces incompatíveis trabalhem juntos, atuando como um "tradutor" que converte a interface de uma classe para a esperada por outra; Adaptar métodos para fazer duas entidades conversarem;
+    Problema: No sistema de controle, gostaria de manipular uma única interface projetor, mesmo com métodos diferenciados;
+
+Fachada => 
