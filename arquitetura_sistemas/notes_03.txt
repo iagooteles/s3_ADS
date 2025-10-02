@@ -23,3 +23,5 @@ Adapter => permite que objetos com interfaces incompatíveis trabalhem juntos, a
     Problema: No sistema de controle, gostaria de manipular uma única interface projetor, mesmo com métodos diferenciados;
 
 Fachada => 
+
+Decorador =>
