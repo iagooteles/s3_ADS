@@ -1,0 +1,90 @@
+1. Selecione nome e data de nascimento de todos os usuários (0.5)
+
+     select nome, data_de_nascimento from usuario;
+
+2. Selecione descrição e saldo de todas as contas do usuário com código = 1 (0.5)
+
+    select descricao, saldo from conta where codigo_usuario = 1;
+
+3. Selecione todas as colunas de todas as movimentações bancárias (0.5)
+
+    select * from movimentacao;
+
+4. Insira um novo usuário no sistema, insira o tipo de conta “Conta investimento”, insira uma nova conta do tipo “Conta investimento” e insira uma nova movimentação bancária do tipo CRÉDITO (0.5)
+
+5. Atualize o cep do usuário 2 para “60115170” (0.5)
+
+    update usuario set cep = '60115170' where codigo = 2;
+
+6. Remova todas as movimentações bancárias da conta de código 3
+
+    delete from movimentacao where codigo_conta = 3;
+
+7. Retorne todos os usuários que nasceram no mês de agosto
+
+    SELECT * FROM usuario WHERE MONTH(data_de_nascimento) = 8;
+
+8. Busque por todos os usuários que nasceram sexta-feira;
+
+    SELECT * FROM usuario WHERE DAYOFWEEK(data_de_nascimento) = 6;
+
+9. Faça uma consulta que projete o código, nome e idade de cada usuário
+
+
+
+10. Liste todas as movimentações bancárias ordenadas de forma decrescente por data da movimentação
+
+    SELECT * FROM movimentacao ORDER BY data_movimentacao DESC;
+
+11. Busque pala movimentação bancária mais antiga
+
+    SELECT * FROM movimentacao ORDER BY data_movimentacao ASC LIMIT 1;
+
+12. Busque por todos os usuários com cep null
+
+    select * from usuario where cep is null;
+
+
+Função de agregação
+1. Selecione o maior saldo bancário da conta do tipo poupança
+
+    select max(saldo) from conta where codigo_tipo_conta = 1;
+
+2. Busque a média das movimentações bancárias que contém na descrição o texto “alimentação”
+
+    select avg(valor) from movimentacao where descricao LIKE 'Alimentação%';
+
+3. Busque pela quantidade de movimentações bancárias realizadas entre as datas de 15 de abril de 2023 e 12 de maio de 2023
+
+
+
+4. Busque a quantidade de usuários que o cep não é null
+
+    select count(*) from usuario where cep is not null;
+
+5. Para as movimentações bancárias com valor menor do que 10 qual o valor min, max e a média?
+
+
+
+6. Faça uma consulta que retorna a quantidade dinheiro que entrou no banco durante o período de novembro e dezembro de 2023
+
+
+
+
+Agregação
+
+1. Selecione a soma de todas dos saldos de todas as contas bancárias
+
+    select sum(saldo) from conta;
+
+2. Selecione a média das movimentações
+
+    select avg(valor) from movimentacao;
+
+3. Selecione a média das movimentações bancárias agrupado por código da conta 
+
+    select avg(valor), codigo_conta from movimentacao group by codigo_conta;
+
+4. Selecione a quantidade de movimentações bancárias por conta bancária
+
+    select count(*), codigo_conta from movimentacao group by codigo_conta;
