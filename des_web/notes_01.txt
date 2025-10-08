@@ -82,3 +82,7 @@ Vamos usar o padrão multi-camadas:
     Criação do objeto;
 
 ORM => Mapeamento Objeto Relacional;
+
+
+JPA =>
+
