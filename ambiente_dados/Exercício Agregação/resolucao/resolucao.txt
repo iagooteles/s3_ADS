@@ -88,3 +88,54 @@ Agregação
 4. Selecione a quantidade de movimentações bancárias por conta bancária
 
     select count(*), codigo_conta from movimentacao group by codigo_conta;
+
+
+JOIN
+
+1. Selecione codigo, nome e saldo bancário de todos os usuários
+
+    select u.codigo, u.nome, SUM(c.saldo) as total_saldo from usuario u
+    left join conta c on u.codigo = c.codigo_usuario
+    group by u.codigo, u.nome;
+
+
+2. Retorno código e nome de todos os usuários que contém pelo menos 1 conta bancária
+
+    select u.codigo, u.nome 
+    from usuario u 
+    inner join conta c on u.codigo = c.codigo_usuario;
+
+
+3. Retorno código e nome de todos os usuários que contém pelo menos 1 conta bancária e todas as movimentações bancárias de cada conta independente se a conta contém movimentação ou não
+
+    select u.codigo, u.nome, m.valor, m.data_movimentacao
+    from usuario u 
+    inner join conta c 
+    on u.codigo = c.codigo_usuario
+    left join movimentacao m
+    on m.codigo_conta = u.codigo;
+
+
+4. Retorno o código e nome de cada usuário juntamente com a junção com todos os tipos de contas existentes no banco de dados
+
+    select u.codigo, u.nome, c.descricao
+    from usuario u 
+    left join conta c 
+    on u.codigo = c.codigo_usuario;
+
+
+5. Para cada usuário selecione seu código e nome juntamente com o saldo de todas as suas contas bancárias e o tipo de conta. Para cada conta bancária a quantidade de movimentações
+
+    SELECT u.codigo, u.nome, c.descricao as tipo_conta, c.saldo, COUNT(m.codigo) AS qnt_movimentacoes
+    FROM usuario u
+    LEFT JOIN conta c ON u.codigo = c.codigo_usuario
+    LEFT JOIN movimentacao m ON c.codigo_usuario = m.codigo_conta
+    GROUP BY u.codigo, u.nome, c.descricao, c.saldo;
+
+
+6.Selecione todas as movimentações bancárias do usuário de código 1
+
+    select u.codigo, u.nome, m.tipo_movimentacao as Tipo, m.valor
+    from usuario u
+    left join movimentacao m on u.codigo = m.codigo_conta
+    where u.codigo = 1;
