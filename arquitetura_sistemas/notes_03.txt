@@ -25,3 +25,5 @@ Adapter => permite que objetos com interfaces incompatíveis trabalhem juntos, a
 Fachada => 
 
 Decorador =>
+
+Observer => 
