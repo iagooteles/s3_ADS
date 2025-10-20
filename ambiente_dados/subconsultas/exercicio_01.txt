@@ -1,0 +1,60 @@
+#1. Fácil
+#Questão:
+#Liste todos os usuários que possuem pelo menos uma conta com saldo maior que 1000.
+
+
+SELECT *
+FROM usuario u
+WHERE u.codigo IN (
+        SELECT DISTINCT codigo FROM conta c WHERE c.saldo > 1000
+);
+
+
+#2. Média
+#Questão:
+#Liste as contas que têm saldo maior que a média dos saldos de todas as contas.
+
+
+
+
+
+
+#3. Média
+
+#Questão:
+#Liste os usuários que possuem pelo menos uma movimentação do tipo "DEBITO" em suas contas.
+
+
+
+
+
+#4. Difícil
+#Questão:
+#Liste os usuários que possuem saldo total (soma de todos os saldos as suas contas) maior que o saldo total médio de todos os usuários.
+
+
+
+
+
+#5. Fácil
+#Questão:
+#Liste os tipos de conta que possuem pelo menos uma conta cadastrada.
+
+
+
+
+
+#6. Fácil
+#Enunciado:
+#Liste os usuários que nunca realizaram uma movimentação do tipo "DÉBITO", mas já realizaram 
+#pelo menos uma movimentação do tipo "CRÉDITO" em qualquer uma de suas contas.
+
+
+
+#Questão 7
+#Enunciado:
+#Liste o nome do usuário e a descrição da conta cuja maior movimentação de crédito 
+#é maior que a média das maiores movimentações de crédito de todos os usuários.
+
+
+
