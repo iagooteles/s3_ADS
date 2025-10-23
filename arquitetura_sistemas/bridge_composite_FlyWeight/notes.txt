@@ -1,0 +1,44 @@
+///////////////////////// bridge //////////////////////////////////
+Contexto: O Bridge é um padrão de projeto estrutural que permite que você divida uma classe grande ou um conjunto de classes intimamente ligadas em duas hierarquias separadas—abstração e implementação—que podem ser desenvolvidas independentemente umas das outras.
+
+Problema: Imagine que você está desenvolvendo um sistema para uma plataforma de streaming de vídeos. Os usuários podem assistir a vídeos em diferentes formatos (por exemplo, MP4, MKV) e em diferentes dispositivos (como TV, smartphone ou computador). 
+Você pode criar uma hierarquia de classes de formatos (VideoMP4, VideoMKV) e, para cada formato, criar subclasses para cada dispositivo, resultando em classes como VideoMP4TV, VideoMP4Smartphone, VideoMKVTV, VideoMKVSmartphone, e assim por diante.
+
+Essa abordagem leva a um crescimento exponencial de classes, o que dificulta a manutenção e a adição de novas funcionalidades. A cada novo formato ou dispositivo, você teria que criar novas subclasses, resultando em uma hierarquia de classes grande e inflexível. Além disso, a lógica de reprodução de vídeo (a implementação) e o tipo de vídeo (a abstração) estão fortemente acoplados, e não podem ser alterados independentemente. 
+
+Solução: O padrão Bridge resolve esse problema dividindo a lógica em duas hierarquias de classes separadas que podem evoluir de forma independente: 
+Hierarquia de Abstração: Define a interface de alto nível para os clientes. No exemplo, seria a classe Video, que contém métodos como reproduzir() ou pausar(). A abstração não se preocupa com os detalhes de como o vídeo é reproduzido, mas delega essa tarefa a um objeto de sua hierarquia de implementação.
+Hierarquia de Implementação: Define a interface de baixo nível, responsável pela lógica de fato. No exemplo, seria a interface Player com métodos como reproduzirVideo() e pausarVideo(). Diferentes classes concretas (PlayerMP4, PlayerMKV) implementariam essa interface. 
+A "ponte" (ou bridge) entre essas duas hierarquias é a composição: a classe de abstração (Video) mantém uma referência a um objeto da hierarquia de implementação (Player). Isso permite que você combine qualquer tipo de vídeo (da hierarquia de abstração) com qualquer tipo de reprodutor (da hierarquia de implementação), reduzindo o número de classes e tornando o sistema mais flexível e fácil de manter.
+
+
+///////////////////////// composite //////////////////////////////////
+Contexto: é um padrão estrutural que permite que objetos individuais e composições de objetos sejam tratados de maneira uniforme. Ele é usado para compor objetos em estruturas de árvore, representando hierarquias de tipo "parte-todo".
+
+Problema: Usar o padrão Composite faz sentido apenas quando o modelo central de sua aplicação pode ser representada como uma árvore.
+Por exemplo, imagine que você tem dois tipos de objetos: Produtos e Caixas. Uma Caixa pode conter diversos Produtos bem como um número de Caixas menores. Essas Caixas menores também podem ter alguns Produtos ou até mesmo Caixas menores que elas, e assim em diante. Como então, determinar se estamos lidando com um produto ou uma caixa, que poderia ter dentro dela outra caixa ou outro produto?
+
+Solução: Para um produto, ele simplesmente retornaria algo determinante de produto, como por exemplo o preço dele. Para uma caixa, ele teria que ver cada item que ela contém, verificar se ele possui esse determinante como por exemplo verificando seu preço e então retornar o total para essa caixa. Se um desses itens for uma caixa menor, aquela caixa também deve verificar seu conteúdo e assim em diante, até que o preço de todos os componentes internos sejam calculados. Uma caixa pode até adicionar um custo extra para o preço final, como um preço de embalagem.
+
+OUTRO EXEMPLO: Esse sistema também funciona com a hierarquia de pastas e arquivos. Como o computador determina se o que ele está lidando é uma pasta ou um arquivo? ele deve verificar se ele está lidando com um arquivo pela sua extensão, ou se está lidando com uma pasta que possui outros arquivos dentro dela.
+
+
+///////////////////////// flyweight //////////////////////////////////
+Contexto: Esse padrão visa reduzir a quantidade de memória utilizada por um programa. Ele compartilha as partes comuns de estado entre vários objetos ao invés de criar um novo para cada, 'reaproveitando' aquela parte comum.
+
+
+Problema: O problema principal surge quando no nosso sistema há muitos objetos, sendo que a maior parte dos dados são idênticos ou repetidos. A abordagem de criar uma nova instância para cada objeto, mesmo que a diferença seja pequena, leva a um desperdício de memória.
+
+
+Solução: O padrão Flyweight resolve esse problema dividindo o estado dos objetos em duas partes: 
+- Estado Intrínseco (Compartilhado):
+    Para o projétil (bala): Modelo 3D da bala, tipo de munição, som do impacto, propriedades físicas (dano, gravidade, velocidade base). Isso é armazenado em uma única instância de BulletTypeFlyweight.
+    Para a partícula: Textura da partícula, cor base, tempo de vida padrão, comportamento do movimento (explosão, rastro). Isso é armazenado em uma instância de ParticleTypeFlyweight.
+
+- Estado extrínseco: 
+    O estado extrínseco de uma bala ou partícula seria sua posição (coordenadas X, Y, Z), a direção em que está se movendo, a velocidade e o tempo de vida após o disparo. Esses dados são únicos para cada projétil e precisam ser armazenados e atualizados individualmente para cada instância.
+
+
+
+
+
