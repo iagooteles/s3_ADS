@@ -121,18 +121,19 @@ Assumindo que status definido é = 'Fechado'...
 
 
 
-● Crie uma consulta que traga o nome do cliente, o produto que ele comprou e a
-quantidade comprada, considerando apenas os pedidos que têm produtos
-associados.
-● Construa uma consulta que retorne todos os endereços de clientes, juntamente com
-o nome do cliente, mas apenas para aqueles endereços que são padrão. Inclua
-também os clientes que não têm endereços.
-● Faça uma consulta que retorne a quantidade total de produtos vendidos por cada
-produto, mesmo que alguns produtos não tenham sido vendidos. Mostre o nome do
-produto e a quantidade vendida.
-● Crie uma consulta que mostre todos os pedidos realizados por um cliente específico
-(por exemplo, idcliente = 1), incluindo o nome do cliente, a data do pedido e o
-valor total do pedido.
+● Crie uma consulta que traga o nome do cliente, o produto que ele comprou e a quantidade comprada, considerando apenas os pedidos que têm produtos associados.
+
+CHECAR!
+
+
+
+● Construa uma consulta que retorne todos os endereços de clientes, juntamente com o nome do cliente, mas apenas para aqueles endereços que são padrão. Inclua também os clientes que não têm endereços.
+● Faça uma consulta que retorne a quantidade total de produtos vendidos por cada produto, mesmo que alguns produtos não tenham sido vendidos. Mostre o nome do produto e a quantidade vendida.
+● Crie uma consulta que mostre todos os pedidos realizados por um cliente específico (por exemplo, idcliente = 1), incluindo o nome do cliente, a data do pedido e o valor total do pedido.
+
+    select c.Nome, p.Datapedido, p.ValorTotalpedido 
+    from pedido p 
+    inner join cliente c on c.idcliente = p.cliente_idcliente;
 
 ____________________________________ Agregação e Junção ____________________________________
 1. Quantos produtos há em cada categoria?
@@ -155,8 +156,7 @@ ____________________________________ Subconsulta _______________________________
     on c.idcliente = p.cliente_idcliente;
 
 3. Liste o número de cada pedido e o nome do produto mais caro vendido nesse pedido.
-4. Quais clientes fizeram pedidos cujo valor total é maior que a média de todos os
-pedidos?
+4. Quais clientes fizeram pedidos cujo valor total é maior que a média de todos os pedidos?
 
 
 
@@ -165,9 +165,8 @@ ____________________________________ Desafio ___________________________________
 
     OBS: valor total todos zerados!
 
-2. Liste o produto mais vendido de cada categoria (baseado na quantidade total
-vendida).
-3. Quais clientes fizeram mais de 2 pedidos e o valor total desses pedidos é superior a
-5000?
+2. Liste o produto mais vendido de cada categoria (baseado na quantidade total vendida).
+3. Quais clientes fizeram mais de 2 pedidos e o valor total desses pedidos é superior a 5000?
 4. Qual categoria gerou o maior valor total em vendas?
 5. Qual é a média de pedidos por cliente, agrupada pelo tipo de cliente?
+
