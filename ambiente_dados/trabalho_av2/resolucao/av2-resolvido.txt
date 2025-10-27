@@ -1,0 +1,173 @@
+____________________________________ DML Básico ____________________________________
+1. Insira um novo registro na tabela categoria com os seguintes dados: idcategoria = 1, Descricao = 'Eletrônicos'.
+
+    UPDATE categoria
+    SET Descricao = 'Eletrônicos'
+    WHERE idcategoria = 1;
+
+2. Insira um novo produto chamado "Notebook", pertencente à categoria com id 1, com
+um preço de 2500.00 e quantidade em estoque de 10.
+
+    ALTER TABLE produto
+    MODIFY COLUMN idproduto INT NOT NULL AUTO_INCREMENT;
+    ALTER TABLE pedido_has_produto
+    DROP FOREIGN KEY fk_pedido_has_produto_produto;
+    ALTER TABLE produto
+    MODIFY COLUMN idproduto INT NOT NULL AUTO_INCREMENT;
+    ALTER TABLE pedido_has_produto
+    ADD CONSTRAINT fk_pedido_has_produto_produto
+    FOREIGN KEY (produto_idproduto) REFERENCES produto(idproduto);
+
+    INSERT INTO produto (Nome, Descricao, Preco, QuantEstoque, categoria_idcategoria)
+    VALUES ('Notebook', 'Notebook Gamer baratinho', 2500.00, 10, 1);
+
+    select * from produto where nome like '%notebook%';
+
+
+3. Atualize o preço do produto com id 1 para 2700.00.
+
+    UPDATE produto
+    SET Preco = 2700
+    WHERE idproduto = 1;
+
+4. Liste o nome e preço de todos os produtos que estão na categoria com id 1.
+
+    select Nome, Preco 
+    from produto 
+    where categoria_idcategoria = 1;
+
+5. Exclua o produto cujo id é 1.
+
+    Error Code: 1451. Cannot delete or update a parent row: a foreign key constraint fails
+        significa que o produto com idproduto = 1 está sendo referenciado na tabela pedido_has_produto, ou seja, há registros dependentes. O MySQL não permite deletar um registro que é referenciado por uma chave estrangeira, para evitar perda de integridade referencial.
+
+    DELETE FROM pedido_has_produto 
+    WHERE produto_idproduto = 1; 
+
+    DELETE FROM produto 
+    WHERE idproduto = 1;
+
+6. Insira dois novos tipos de clientes: 'Regular' e 'VIP'.
+
+    insert into tipocliente(idtipocliente, Descricao)
+    values (3, 'Regular');
+
+    insert into tipocliente(idtipocliente, Descricao)
+    values (4, 'VIP');
+
+7. Liste o nome dos clientes e os tipos de clientes correspondentes.
+
+    select c.Nome, tc.Descricao from cliente c
+    inner join tipocliente tc 
+    on c.tipocliente_idtipocliente = tc.idtipocliente;
+
+8. Atualize a quantidade em estoque de todos os produtos na categoria 1, adicionando 5 unidades.
+
+    UPDATE produto
+    SET QuantEstoque = QuantEstoque + 5
+    WHERE categoria_idcategoria = 1;
+
+
+____________________________________ Agregação ____________________________________
+
+1. Qual é a quantidade total de produtos em estoque?
+
+    SELECT SUM(QuantEstoque) AS TotalEstoque
+    FROM produto;
+
+2. Qual é o preço médio dos produtos cadastrados?
+
+    select avg(Preco) from produto;
+
+
+3. Quantos clientes estão cadastrados no banco de dados?
+
+    select count(*) from cliente;
+
+4. Qual é o produto mais caro no banco de dados?
+
+    SELECT *
+    FROM produto
+    ORDER BY Preco DESC
+    LIMIT 1;
+
+5. Qual é a média de quantidade de produtos por pedido?
+
+    select avg(Quantidade) from pedido_has_produto;
+
+____________________________________ Junção ____________________________________
+● Crie uma consulta que retorne o nome do cliente e a descrição do status do pedido para todos os pedidos realizados. A consulta deve incluir apenas os pedidos que têm status definido.
+
+Assumindo que status definido é = 'Fechado'...
+
+    SELECT c.Nome, s.Descricao AS StatusPedido
+    FROM cliente c
+    INNER JOIN pedido p ON c.idcliente = p.cliente_idcliente
+    INNER JOIN status s ON s.idstatus = p.status_idstatus
+    WHERE s.idstatus = 2;
+
+● Faça uma consulta que liste todos os produtos junto com o nome da categoria a que pertencem. Inclua produtos que não estejam associados a nenhuma categoria.
+
+    select p.Nome, p.Descricao, p.Preco, p.QuantEstoque, c.Descricao from produto p
+    left join categoria c on c.idcategoria = p.idproduto;
+
+● Elabore uma consulta que mostre todos os tipos de cliente e seus respectivos clientes. Mesmo que um tipo de cliente não tenha clientes associados, ele deve aparecer na lista.
+
+    select tc.Descricao, c.Nome
+    from tipocliente tc
+    left join cliente c on c.tipocliente_idtipocliente = tc.idtipocliente;
+
+● Crie uma consulta que retorne todas as combinações possíveis entre clientes e tipos de endereço. A consulta deve incluir todos os clientes e todos os tipos de endereço, mesmo que não haja correspondência.
+
+
+
+● Crie uma consulta que traga o nome do cliente, o produto que ele comprou e a
+quantidade comprada, considerando apenas os pedidos que têm produtos
+associados.
+● Construa uma consulta que retorne todos os endereços de clientes, juntamente com
+o nome do cliente, mas apenas para aqueles endereços que são padrão. Inclua
+também os clientes que não têm endereços.
+● Faça uma consulta que retorne a quantidade total de produtos vendidos por cada
+produto, mesmo que alguns produtos não tenham sido vendidos. Mostre o nome do
+produto e a quantidade vendida.
+● Crie uma consulta que mostre todos os pedidos realizados por um cliente específico
+(por exemplo, idcliente = 1), incluindo o nome do cliente, a data do pedido e o
+valor total do pedido.
+
+____________________________________ Agregação e Junção ____________________________________
+1. Quantos produtos há em cada categoria?
+2. Qual é a quantidade total de produtos em estoque para cada categoria?
+3. Quantos pedidos existem para cada status?
+4. Quantos clientes pertencem a cada tipo de cliente?
+
+____________________________________ Subconsulta ____________________________________
+1. Quais produtos têm um preço acima da média de todos os produtos cadastrados?
+
+    select *
+    from produto
+    where Preco > (select avg(Preco) from produto);
+
+2. Liste o nome dos clientes que fizeram pelo menos um pedido.
+
+    select distinct c.Nome
+    from cliente c
+    inner join pedido p
+    on c.idcliente = p.cliente_idcliente;
+
+3. Liste o número de cada pedido e o nome do produto mais caro vendido nesse pedido.
+4. Quais clientes fizeram pedidos cujo valor total é maior que a média de todos os
+pedidos?
+
+
+
+____________________________________ Desafio ____________________________________ 
+1. Qual cliente realizou o maior valor total em pedidos? 
+
+    OBS: valor total todos zerados!
+
+2. Liste o produto mais vendido de cada categoria (baseado na quantidade total
+vendida).
+3. Quais clientes fizeram mais de 2 pedidos e o valor total desses pedidos é superior a
+5000?
+4. Qual categoria gerou o maior valor total em vendas?
+5. Qual é a média de pedidos por cliente, agrupada pelo tipo de cliente?
