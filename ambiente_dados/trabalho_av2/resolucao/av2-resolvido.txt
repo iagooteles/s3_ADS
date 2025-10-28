@@ -23,7 +23,6 @@ um preço de 2500.00 e quantidade em estoque de 10.
 
     select * from produto where nome like '%notebook%';
 
-
 3. Atualize o preço do produto com id 1 para 2700.00.
 
     UPDATE produto
@@ -79,7 +78,6 @@ ____________________________________ Agregação _______________________________
 
     select avg(Preco) from produto;
 
-
 3. Quantos clientes estão cadastrados no banco de dados?
 
     select count(*) from cliente;
@@ -119,27 +117,86 @@ Assumindo que status definido é = 'Fechado'...
 
 ● Crie uma consulta que retorne todas as combinações possíveis entre clientes e tipos de endereço. A consulta deve incluir todos os clientes e todos os tipos de endereço, mesmo que não haja correspondência.
 
-
+    select 
+        c.idcliente,
+        c.Nome as NomeCliente,
+        te.descricao as TipoEndereco
+    from 
+        cliente c
+    cross join 
+        tipoendereco te;
 
 ● Crie uma consulta que traga o nome do cliente, o produto que ele comprou e a quantidade comprada, considerando apenas os pedidos que têm produtos associados.
 
-CHECAR!
-
-
+    select 
+        c.Nome,
+        pr.Nome,
+        php.Quantidade
+    from 
+        cliente c
+    inner join 
+        pedido p on p.cliente_idcliente = c.idcliente
+    inner join 
+        pedido_has_produto php on php.pedido_idpedido = p.idpedido
+    inner join 
+        produto pr on pr.idproduto = php.produto_idproduto;
 
 ● Construa uma consulta que retorne todos os endereços de clientes, juntamente com o nome do cliente, mas apenas para aqueles endereços que são padrão. Inclua também os clientes que não têm endereços.
+
+    select c.Nome, e.Logradouro, e.Numero, e.Complemento, e.Bairro, e.Cidade, e.UF, e.CEP
+    from cliente c
+    left join endereco e
+    on e.cliente_idcliente = c.idcliente 
+    and e.EnderecoPadrao = 1;
+
 ● Faça uma consulta que retorne a quantidade total de produtos vendidos por cada produto, mesmo que alguns produtos não tenham sido vendidos. Mostre o nome do produto e a quantidade vendida.
+
+    select p.Nome,
+    coalesce(sum(php.Quantidade), 0)
+    from produto p
+    left join pedido_has_produto php 
+    on php.produto_idproduto = p.idproduto
+    group by p.Nome;
+
 ● Crie uma consulta que mostre todos os pedidos realizados por um cliente específico (por exemplo, idcliente = 1), incluindo o nome do cliente, a data do pedido e o valor total do pedido.
 
     select c.Nome, p.Datapedido, p.ValorTotalpedido 
     from pedido p 
-    inner join cliente c on c.idcliente = p.cliente_idcliente;
+    inner join cliente c on c.idcliente = p.cliente_idcliente
+    where c.idcliente = 1;
 
 ____________________________________ Agregação e Junção ____________________________________
 1. Quantos produtos há em cada categoria?
+
+    select c.Descricao, count(p.idproduto)
+    from categoria c
+    left join produto p
+    on p.categoria_idcategoria = c.idcategoria
+    group by c.Descricao;
+
 2. Qual é a quantidade total de produtos em estoque para cada categoria?
+
+    select c.Descricao, sum(p.QuantEstoque)
+    from categoria as c
+    left join produto p
+    on p.categoria_idcategoria = c.idcategoria
+    group by c.Descricao;
+
 3. Quantos pedidos existem para cada status?
+
+    select s.Descricao, count(p.idpedido) 
+    from status s
+    left join pedido p
+    on p.status_idstatus = s.idstatus
+    group by s.Descricao;
+
 4. Quantos clientes pertencem a cada tipo de cliente?
+
+    select tc.Descricao, count(c.idcliente)
+    from tipocliente tc
+    left join cliente c
+    on c.tipocliente_idtipocliente = tc.idtipocliente
+    group by tc.Descricao;
 
 ____________________________________ Subconsulta ____________________________________
 1. Quais produtos têm um preço acima da média de todos os produtos cadastrados?
@@ -156,17 +213,88 @@ ____________________________________ Subconsulta _______________________________
     on c.idcliente = p.cliente_idcliente;
 
 3. Liste o número de cada pedido e o nome do produto mais caro vendido nesse pedido.
+    
+    select p.idpedido, pr.Nome as ProdutoMaisCaro, php.PrecoUnitario
+    from pedido p
+    inner join pedido_has_produto as php 
+    on php.pedido_idpedido = p.idpedido
+    inner join produto pr
+    on pr.idproduto = php.produto_idproduto
+    where php.PrecoUnitario = (
+            select max(php2.PrecoUnitario)
+            from pedido_has_produto php2
+            where php2.pedido_idpedido = p.idpedido
+        );
+
 4. Quais clientes fizeram pedidos cujo valor total é maior que a média de todos os pedidos?
 
-
+    select c.idcliente, c.Nome
+    from cliente c
+    join pedido p
+    on p.cliente_idcliente = c.idcliente
+    where p.ValorTotalpedido > (
+            select avg(ValorTotalpedido) 
+            from pedido
+        );
 
 ____________________________________ Desafio ____________________________________ 
 1. Qual cliente realizou o maior valor total em pedidos? 
 
-    OBS: valor total todos zerados!
+    select c.idcliente, c.Nome, sum(p.ValorTotalpedido) as TotalPedidos
+    from cliente c
+    join pedido p
+    on p.cliente_idcliente = c.idcliente
+    group by c.idcliente, c.Nome
+    order by TotalPedidos
+    LIMIT 1;
 
 2. Liste o produto mais vendido de cada categoria (baseado na quantidade total vendida).
+
+    TODO: checar esse aqui =>
+
+    select vp.Categoria, vp.Produto, vp.QuantidadeVendida
+    from ( select c.idcategoria, c.Descricao AS Categoria, p.idproduto,
+            p.Nome AS Produto,
+            sum(php.Quantidade) AS QuantidadeVendida,
+            ROW_NUMBER() OVER (
+                PARTITION BY c.idcategoria
+                ORDER BY SUM(php.Quantidade) DESC
+            ) AS rn
+        from categoria c
+        join produto p on p.categoria_idcategoria = c.idcategoria
+        join pedido_has_produto php on php.produto_idproduto = p.idproduto
+        group by c.idcategoria, c.Descricao, p.idproduto, p.Nome
+    ) as vp
+    where vp.rn = 1;
+
 3. Quais clientes fizeram mais de 2 pedidos e o valor total desses pedidos é superior a 5000?
+
+    select c.idcliente, c.Nome AS NomeCliente, count(p.idpedido), sum(p.ValorTotalpedido)
+    from cliente c
+    join pedido p
+    on p.cliente_idcliente = c.idcliente
+    group by c.idcliente, c.Nome
+    having count(p.idpedido) > 2 and sum(p.ValorTotalpedido) > 5000;
+
 4. Qual categoria gerou o maior valor total em vendas?
+
+    select c.Descricao, sum(php.Quantidade * php.PrecoUnitario) as TotalVendas
+    from categoria c
+    join produto p
+    on p.categoria_idcategoria = c.idcategoria
+    join pedido_has_produto php
+    on php.produto_idproduto = p.idproduto
+    group by c.Descricao
+    order by TotalVendas
+    limit 1;
+
 5. Qual é a média de pedidos por cliente, agrupada pelo tipo de cliente?
+
+    select tc.Descricao, count(p.idpedido) / count(distinct c.idcliente) as MediaPedidosPorCliente
+    from tipocliente tc
+    left join cliente c
+    on c.tipocliente_idtipocliente = tc.idtipocliente
+    left join pedido p
+    on p.cliente_idcliente = c.idcliente
+    group by tc.Descricao;
 
