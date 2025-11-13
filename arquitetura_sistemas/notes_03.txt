@@ -27,3 +27,32 @@ Fachada =>
 Decorador =>
 
 Observer => 
+
+
+_________________________________________________________________________________________________________________________________________________
+
+Arquitetura de software => Conjunto de elementos arquiteturais (dados, processamento, conexão) que possuem alguma organização.
+
+O que faz um arquiteto de software: 
+ - especificação da aarquitetura de software e das bases para o sistema de acordo com os requisitos do cliente.
+ - modelagem
+ - análise de trade-offs e viabilidade.
+ - prototipação, simulação e realização de experimentos.
+ - análise de tendências tecnológicas.
+ - Atuação como mentor de arquitetos novatos.
+
+Importância da arquitetura:
+    - Performance
+    - Confiabilidade
+    - Escalabilidade
+    - Testabilidade
+    - Manutenibilidade
+
+Impactos da escolha da arquitetura:
+    Facilitar comunicação com stakeholders
+    Promover o reuso de software em larga escala, pois sistemas com requisitos semelhantes podem ter a mesma arquitetura;
+    É possível elaborar um projeto de arquitetura para uma linha de produto;
+    Desempenho, confiabilidade e facilidade de manutenção;
+
+
+PMBOK - Project Management Body Of Knowledge;
