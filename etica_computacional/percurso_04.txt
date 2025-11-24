@@ -1,0 +1,58 @@
+/////////////////////////////////////////////////////////////////////
+
+sustentabilidade -> tripé: ambiente; sociedade; economia;
+    socialmente justa;
+    economicamente viável;
+    ambientalmetne correta;
+
+Computação verde =>
+
+1. Legislação socioambiental relacionada à tecnologia da informação e comunicação
+
+
+2. Código de ética no tratamento do lixo tecnológico: cenários e impactos
+
+lixo eletrônico também pode ser conhecido como e-lixo ou e-sucata - todos os componentes, subconjuntos e materiais consumíveis que fazem parte do produto no momento em que este é descartado
+
+Computação verde - Green Computing;
+Desse modo, é possível abordar o tema da Computação Verde (CV) em quatro dimensões, assim definidas:
+
+•	 Utilização verde: objetiva reduzir o consumo de eletricidade, utilizando de forma ecológica computadores e demais dispositivos eletroeletrônicos.
+•	 Design verde: envolve a concepção de computadores, servidores, impressoras e demais dispositivos de modo a possibilitarem uso econômico quanto ao consumo de energia.
+•	 Fabricação verde: visa reduzir o desperdício no processo de fabricação de computadores e demais dispositivos eletroeletrônicos, tendo como meta a geração de impacto zero ou mínimos ao meio ambiente. 
+•	 Eliminação verde: busca reprojetar computadores já existentes ou realizar o descarte ou a reciclagem adequada de equipamentos eletroeletrônicos que já não possuíam serventia.
+
+
+
+Exercícios => 
+
+De acordo com a PNRS (Lei nº 12.305/2010), a logística reversa é o instrumento que visa a promover o desenvolvimento econômico e social, pautado em ações e procedimentos integrados que visem ao reaproveitamento de resíduos sólidos para o setor produtivo, bem como outras destinações. Entre os objetivos da logística reversa estão:
+
+    corresponsabilização entre geradores de resíduos e eliminação de lixões.
+
+
+Podemos notar que “[...] há uma tecnologia humana antes de haver uma tecnologia material” (Deleuze _apud _Batista; Freire, 2014, p. 65). A reflexão de Gilles Deleuze traduz um aspecto que revela o impacto da tecnologia em nosso contexto. A esse respeito, pode-se concluir que:
+    
+    Antes de ser algo meramente técnico, a tecnologia é social, produzindo efeitos em múltiplas dimensões da sociedade, tais como a cultura, a economia e o meio ambiente.
+
+
+
+Estão entre os objetivos da Política Nacional de Resíduos Sólidos (PNRS - Lei nº 12.305/2010):
+
+Prevenção e redução na geração de resíduos, bem como difusão de hábitos de consumo sustentáveis.
+Adequação da produção e de recursos energéticos às fontes provenientes de combustíveis fósseis.
+Atuação limitada de fabricantes e demais organizações produtoras quanto à responsabilidade sobre a destinação de rejeitos.
+Expansão de processos de reciclagem e reutilização de resíduos sólidos.
+
+É correto o que se afirma em:
+
+    I e IV, apenas.
+
+
+A Computação Verde (CV) surge em resposta às necessidades de uma atuação profissional atenta e responsável em relação aos efeitos trazidos para o meio ambiente. A CV compreende 4 eixos fundamentais, quais sejam: fabricação verde, utilização verde, design verde e eliminação verde. A concepção de dispositivos, tais como computadores, servidores, impressoras, entre outros, a fim de possibilitar um uso econômico quanto ao consumo de energia, diz respeito ao eixo:
+
+    design verde.
+
+
+
+Fazer novamente!

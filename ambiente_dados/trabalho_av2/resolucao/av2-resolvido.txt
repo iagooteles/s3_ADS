@@ -245,7 +245,7 @@ ____________________________________ Desafio ___________________________________
     join pedido p
     on p.cliente_idcliente = c.idcliente
     group by c.idcliente, c.Nome
-    order by TotalPedidos
+    order by TotalPedidos desc
     LIMIT 1;
 
 2. Liste o produto mais vendido de cada categoria (baseado na quantidade total vendida).

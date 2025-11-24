@@ -13,30 +13,26 @@ um preço de 2500.00 e quantidade em estoque de 10.
 
 
 Agregação
-1. Qual é a quantidade total de produtos em estoque?
+OK -> 1. Qual é a quantidade total de produtos em estoque?
 2. Qual é o preço médio dos produtos cadastrados?
 3. Quantos clientes estão cadastrados no banco de dados?
-4. Qual é o produto mais caro no banco de dados?
+OK -> 4. Qual é o produto mais caro no banco de dados?
 5. Qual é a média de quantidade de produtos por pedido?
 
 Junção
-● Crie uma consulta que retorne o nome do cliente e a descrição do status do pedido
-para todos os pedidos realizados. A consulta deve incluir apenas os pedidos que
-têm status definido.
+OK -> ● Crie uma consulta que retorne o nome do cliente e a descrição do status do pedido para todos os pedidos realizados. A consulta deve incluir apenas os pedidos que têm status definido.
 ● Faça uma consulta que liste todos os produtos junto com o nome da categoria a que
 pertencem. Inclua produtos que não estejam associados a nenhuma categoria.
-● Elabore uma consulta que mostre todos os tipos de cliente e seus respectivos
-clientes. Mesmo que um tipo de cliente não tenha clientes associados, ele deve
-aparecer na lista.
+
+OK -> ● Elabore uma consulta que mostre todos os tipos de cliente e seus respectivos clientes. Mesmo que um tipo de cliente não tenha clientes associados, ele deve aparecer na lista.
+
 ● Crie uma consulta que retorne todas as combinações possíveis entre clientes e tipos
 de endereço. A consulta deve incluir todos os clientes e todos os tipos de endereço,
 mesmo que não haja correspondência.
 ● Crie uma consulta que traga o nome do cliente, o produto que ele comprou e a
 quantidade comprada, considerando apenas os pedidos que têm produtos
 associados.
-● Construa uma consulta que retorne todos os endereços de clientes, juntamente com
-o nome do cliente, mas apenas para aqueles endereços que são padrão. Inclua
-também os clientes que não têm endereços.
+OK -> ● Construa uma consulta que retorne todos os endereços de clientes, juntamente com o nome do cliente, mas apenas para aqueles endereços que são padrão. Inclua também os clientes que não têm endereços.
 ● Faça uma consulta que retorne a quantidade total de produtos vendidos por cada
 produto, mesmo que alguns produtos não tenham sido vendidos. Mostre o nome do
 produto e a quantidade vendida.
@@ -45,16 +41,22 @@ produto e a quantidade vendida.
 valor total do pedido.
 
 Agregação e Junção
-1. Quantos produtos há em cada categoria?
+OK -> 1. Quantos produtos há em cada categoria?
 2. Qual é a quantidade total de produtos em estoque para cada categoria?
 3. Quantos pedidos existem para cada status?
 4. Quantos clientes pertencem a cada tipo de cliente?
 
 Subconsulta
-1. Quais produtos têm um preço acima da média de todos os produtos cadastrados?
-2. Liste o nome dos clientes que fizeram pelo menos um pedido.
-3. Liste o número de cada pedido e o nome do produto mais caro vendido nesse
-pedido.
+
+
+OK -> 1. Quais produtos têm um preço acima da média de todos os produtos cadastrados?
+
+OK -> 2. Liste o nome dos clientes que fizeram pelo menos um pedido.
+
+3. Liste o número de cada pedido e o nome do produto mais caro vendido nesse pedido.
+
+
+
 4. Quais clientes fizeram pedidos cujo valor total é maior que a média de todos os
 pedidos?
 

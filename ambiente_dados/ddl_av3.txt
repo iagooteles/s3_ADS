@@ -1,0 +1,103 @@
+DROP SCHEMA IF EXISTS ambiente_dadosdb;
+CREATE SCHEMA IF NOT EXISTS ambiente_dadosdb;
+USE ambiente_dadosdb;
+
+CREATE TABLE user(
+    id_user NUMERIC(10) NOT NULL PRIMARY KEY,
+    primeiro_nome VARCHAR(20) NOT NULL,
+    sobrenome VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    password VARCHAR(50) NOT NULL,
+    bio VARCHAR(1000),
+    data_nascimento DATE NOT NULL 
+);
+
+CREATE TABLE configuration(
+    id_config NUMERIC(10) NOT NULL PRIMARY KEY,
+    user_config VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE badge(
+    id_badge NUMERIC(10) NOT NULL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    requirement VARCHAR(1000) NOT NULL
+);
+
+CREATE TABLE playlist(
+    id_playlist NUMERIC(10) NOT NULL PRIMARY KEY,
+    content VARCHAR(1000) NOT NULL,
+    name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE message(
+    id_message NUMERIC(10) NOT NULL PRIMARY KEY,
+    content VARCHAR(1000) NOT NULL
+);
+
+CREATE TABLE user_message(
+    id_message NUMERIC(10) NOT NULL ,
+    id_user NUMERIC(10) NOT NULL ,
+    sentAt DATE NOT NULL,
+    FOREIGN KEY (id_message) REFERENCES message(id_message),
+    FOREIGN KEY (id_user) REFERENCES user(id_user),
+    PRIMARY KEY (id_message,id_user)
+);
+
+CREATE TABLE achievement(
+    id_achievement NUMERIC(10) NOT NULL PRIMARY KEY,
+    title VARCHAR(20) NOT NULL,
+    description VARCHAR(1000) NOT NULL
+);
+
+CREATE TABLE user_achievement(
+    id_achievement NUMERIC(10) NOT NULL,
+    id_user NUMERIC(10) NOT NULL ,
+    achievedAt DATE NOT NULL,
+    FOREIGN KEY (id_achievement) REFERENCES achievement(id_achievement),
+    FOREIGN KEY (id_user) REFERENCES user(id_user),
+    PRIMARY KEY(id_achievement,id_user)
+);
+
+CREATE TABLE game(
+    id_game NUMERIC(10) NOT NULL PRIMARY KEY,
+    title VARCHAR(50) NOT NULL,
+    description VARCHAR(1000) NOT NULL,
+    developer VARCHAR(50) NOT NULL,
+    publisher VARCHAR(50) NOT NULL,
+    release_date DATE NOT NULL
+);
+
+CREATE TABLE genre(
+    id_genre NUMERIC(10) NOT NULL PRIMARY KEY,
+    name VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE game_genre(
+    id_game NUMERIC(10) NOT NULL ,
+    id_genre NUMERIC(10) NOT NULL ,
+    game_title VARCHAR(50) NOT NULL,
+    PRIMARY KEY (id_game, id_genre)
+);
+
+CREATE TABLE genre_name(
+    id_genre_name NUMERIC(10) NOT NULL ,
+    id_game_genre NUMERIC(10) NOT NULL ,
+    name VARCHAR(50) NOT NULL,
+    FOREIGN KEY (id_game_genre , id_genre_name) REFERENCES game_genre(id_game,id_genre),
+    PRIMARY KEY (id_genre_name , id_game_genre)
+);
+
+CREATE TABLE review(
+    id_review NUMERIC(10) NOT NULL PRIMARY KEY,
+    rating NUMERIC(5) NOT NULL
+);
+
+CREATE TABLE likes(
+    id_like NUMERIC(10) NOT NULL PRIMARY KEY,
+    createdAt DATE NOT NULL
+);
+
+CREATE TABLE comment(
+    id_comment NUMERIC(10) NOT NULL PRIMARY KEY,
+    content VARCHAR(1000) NOT NULL
+);
